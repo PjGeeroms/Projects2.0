@@ -1,0 +1,10 @@
+.services-overview {
+  grid-column-gap: 2em;
+  grid-row-gap: 5em;
+
+  .card {
+    &__image {
+      box-shadow: 0px -5px 10px #0000000d
+    }
+  }
+}

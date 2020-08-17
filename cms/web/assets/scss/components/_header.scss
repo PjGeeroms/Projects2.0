@@ -1,0 +1,34 @@
+.site-header {
+  @extend %container;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &--spacer {
+    height: 60px;
+
+    @include bp-navigation-helper {
+      height: 90px;
+    }
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 20px !important;
+    left: 20px !important;
+    right: 20px !important;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    transition: top .4s ease-in-out;
+    z-index: 100;
+
+    &.hide {
+      top: -91px !important;
+    }
+  }
+}

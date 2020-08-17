@@ -1,0 +1,45 @@
+{% extends "_layouts/main" %}
+
+{% block content %}
+  <div class="container--fw container@md">
+    <div class="container">
+      <div class="grid--fw my-1 pt-7 pb-6@md my-0@md px-2@lg">
+        <div class="col-12">
+          <div class="grid pb-5">
+            <div class="col-12 col-10@md col-7@lg">
+              <div class="box--stack">
+                <h1 data-aos="fade-up">{{ entry.title }}</h1>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    {{ entry.pageDescription }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container--fw container@md mb-4">
+    <div class="container">
+      <div class="grid--fw">
+        <div class="col-12">
+          <picture class="case-image">
+              {% set image = entry.image.one() %}
+              {% set sizes = [
+                  { width: 1400 },
+                  { width: 1000 },
+                  { width: 800 },
+                  { width: 500 },
+                  { width: 400 }
+              ] %}
+              {% set optimized = craft.imager.transformImage(image, sizes, { ratio: 3/1, position: '100% 100%', jpegQuality: 80 }) %}
+            <img src="{{ craft.imager.placeholder({ width: 320, height: 180 }) }}"
+                 sizes="100vw"
+                 srcset="{{ craft.imager.srcset(optimized) }}">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

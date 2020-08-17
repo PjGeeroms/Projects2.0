@@ -1,0 +1,26 @@
+{% extends "_layouts/main" %}
+
+{% block content %}
+
+    <div class="container--fw container@md">
+        <div class="container">
+            <div class="grid--fw my-1 pt-7 pb-6@md my-0@md px-2@lg">
+                <div class="col-12">
+                    <div class="grid pb-5">
+                        <div class="col-12 col-10@md col-7@lg">
+                            <div class="box--stack">
+                                <h1 data-aos="fade-up">{{ entry.pageTitle }}</h1>
+                                <div data-aos="fade-up" data-aos-delay="100">
+                                    {{ entry.pageDescription }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "_layouts/matrixPageContent" %}
+
+{% endblock %}

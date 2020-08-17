@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: aa2b22c3-a5a2-4756-8b4c-55d7606a8781
+handle: excerpt
+instructions: 'The excerpt shown on overview pages.'
+name: Excerpt
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '5'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

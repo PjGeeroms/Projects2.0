@@ -1,0 +1,34 @@
+fieldLayouts:
+  bd668890-d959-46ac-8467-b09e514da767:
+    tabs:
+      -
+        fields:
+          4692033e-4b14-49b0-a854-7650bfbdee3f:
+            required: false
+            sortOrder: 1
+          53213477-b83c-443c-8c18-8e964348dd10:
+            required: false
+            sortOrder: 2
+        name: General
+        sortOrder: 1
+      -
+        fields:
+          60c89584-3234-4995-91f4-aafb5fc197d3:
+            required: false
+            sortOrder: 5
+          b6575f15-f11d-4cd8-ba22-43ff83f4a5e2:
+            required: false
+            sortOrder: 4
+          ca146f73-3945-4130-aecc-b0370aa4f750:
+            required: false
+            sortOrder: 2
+          cc2edea5-e847-4d0d-b514-aeeefe6d1d63:
+            required: false
+            sortOrder: 3
+          d0d94be1-ce7b-4a66-8dbe-e66edce3f255:
+            required: false
+            sortOrder: 1
+        name: 'Case Filler Settings'
+        sortOrder: 2
+handle: casesPage
+name: 'Cases page'

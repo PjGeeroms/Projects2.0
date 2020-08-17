@@ -1,0 +1,66 @@
+{% extends "_layouts/main" %}
+
+{% set removeSpacer = true %}
+{% set blogs = craft.entries().section('blog').all() %}
+
+{% block content %}
+  <div class="container--fw container@md is-light">
+    <div class="container">
+      <div class="grid--fw my-1 pt-14 pb-6@md my-0@md px-2@lg">
+        <div class="col-12">
+          <div class="grid pb-5">
+            <div class="col-12 col-10@md col-7@lg">
+              <div class="box--stack">
+                <h1 data-aos="fade-up">{{ blogPage.pageTitle }}</h1>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    {{ blogPage.pageDescription }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container--fw container@md is-light mb-4">
+    <div class="container">
+      <div class="grid--fw">
+        <div class="col-12">
+          <section class="grid">
+            {% set delay = 0 %}
+            {% for blog in blogs %}
+              <article class="col-6 case-teaser" data-aos="fade-up" data-aos-delay="{{ delay }}">
+                <picture>
+                  {% set image = blog.image.one() %}
+                  {% set sizes = [
+                    { width: 1400 },
+                    { width: 1000 },
+                    { width: 800 },
+                    { width: 500 },
+                    { width: 400 }
+                  ] %}
+                  {% set optimized = craft.imager.transformImage(image, sizes, { ratio: 10/7, position: '100% 100%', jpegQuality: 80 }) %}
+                  <img src="{{ craft.imager.placeholder({ width: 320, height: 180 }) }}"
+                       sizes="100vw"
+                       srcset="{{ craft.imager.srcset(optimized) }}">
+                </picture>
+                <div class="case-teaser__content">
+                  <div class="badge">Category</div>
+                  <h1 class="h4">
+                    <a class="extend-link" href="{{ blog.url }}">{{ blog.title }}</a>
+                  </h1>
+                  <span class="case-teaser__see-more">
+                    Lees meer
+                    {% include 'includes/icons/right-arrow' %}
+                  </span>
+                </div>
+              </article>
+              {% set delay = delay + 200 %}
+            {% endfor %}
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

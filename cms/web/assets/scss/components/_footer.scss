@@ -1,0 +1,31 @@
+footer {
+  hr {
+    height: 1px;
+    background-color: var(--color-white);
+    opacity: .15;
+    width: 100%;
+  }
+
+  .footer-menu {
+    margin-top: -1rem;
+
+    li {
+      a {
+        display: inline-block;
+        padding: 1rem 0;
+        @include font-size(1.25rem);
+        transition: .3s color ease-in-out;
+
+        &:hover {
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: var(--color-white);
+    opacity: .3;
+    font-size: .6875rem;
+  }
+}

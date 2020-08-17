@@ -1,0 +1,30 @@
+.mobile-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--menutoggle-bgcolor);
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+
+  @include bp-navigation-helper {
+    width: 90px;
+    height: 90px;
+  }
+
+  span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: var(--menutoggle-color);
+    transition: background-color .3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: var(--menutoggle-bgcolor-hover);
+
+    span {
+      color: var(--menutoggle-color-hover);
+    }
+  }
+}

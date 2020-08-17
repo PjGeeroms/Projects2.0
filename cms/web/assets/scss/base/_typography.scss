@@ -1,0 +1,65 @@
+$font-scale-1: 4.768rem;
+$font-scale-2: 3.815rem;
+$font-scale-3: 3.052rem;
+$font-scale-4: 2.441rem;
+$font-scale-5: 1.953rem;
+$font-scale-6: 1.563rem;
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Graphik", sans-serif;
+  font-weight: 600;
+  letter-spacing: -.7px;
+  margin: 2.75rem 0 1.05rem;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+h1, .h1, h2, .h2 {
+  margin-left: -5px;
+}
+
+h1, .h1 {
+  @include font-size($font-scale-1);
+  margin-top: 0;
+}
+
+h2, .h2 {
+  @include font-size($font-scale-2);
+}
+
+h3, .h3 {
+  @include font-size($font-scale-3);
+}
+
+h4, .h4 {
+  @include font-size($font-scale-4);
+}
+
+h5, .h5 {
+  @include font-size($font-scale-5);
+}
+
+h6, .h6 {
+  @include font-size($font-scale-6);
+}
+
+p {
+  font-family: "Graphik", sans-serif;
+  @include font-size(1.25rem);
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 1.15rem;
+
+  strong {
+    font-weight: 600;
+  }
+
+  small {
+    @include font-size(.875rem);
+  }
+
+  i {
+    font-style: italic;
+  }
+}
+

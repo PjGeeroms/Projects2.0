@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  width: 60px;
+  transition: width .3s ease-in-out;
+
+  @include bp-navigation-helper {
+    width: 90px;
+  }
+}

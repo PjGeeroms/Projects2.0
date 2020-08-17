@@ -1,0 +1,79 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  outline: none;
+  color: inherit;
+
+}
+
+body {
+  font-family: "Graphik", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  font-size: 100%;
+  overflow-x: hidden;
+  ::-moz-selection { background: var(--color-yellow); color: white; }
+  ::selection { background: var(--color-yellow); color: white; }
+}
+
+picture {
+  display: block;
+}
+
+svg, img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.screen-reader-text {
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute!important;
+  width: 1px;
+  word-wrap: normal!important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  position: relative;
+  overflow: hidden;
+
+  max-width: 100vw;
+  width: 100%;
+
+  margin: 20px 0; // Offsetting the window frame
+
+  &::before, &::after {
+    display: block;
+    height: 20px;
+    width: 100%;
+
+    position: fixed;
+    left: 0;
+
+    background-color: var(--color-viewFrame);
+
+    content: "";
+    z-index: 100;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+

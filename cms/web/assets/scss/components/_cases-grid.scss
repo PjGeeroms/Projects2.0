@@ -1,0 +1,100 @@
+.cases-grid {
+  display: grid;
+  grid-gap: 1em;
+
+  @include bp-lg {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .case {
+    display: flex;
+    flex-direction: column;
+    transform: perspective(3000px) scale3d(1, 1, 1);
+    transition: transform 0.3s ease 0s;
+    border-radius: 2px;
+    height: 450px;
+    overflow: hidden;
+
+    &__text-block {
+      padding: 3em 3em 2em 3em;
+
+      .case {
+        &__client, &__title {
+          color: var(--color-white);
+        }
+
+        &__client {
+          @include font-size(1rem);
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          margin-top: 0;
+        }
+
+        &__title {
+          @extend .h5;
+          font-weight: 500;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &__case-image {
+      margin-left: 3em;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      min-height: 400px;
+
+      img {
+        display: block;
+        width: calc(100% - 3rem);
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        object-position: top left;
+      }
+    }
+
+    @include bp-md {
+      height: 540px;
+    }
+
+  }
+
+  .case:nth-of-type(6n + 1), .case:nth-of-type(6n + 5) {
+    background: radial-gradient(circle at 13.0826% 3.91964%, rgb(99, 51, 164), rgb(142, 106, 188));
+  }
+
+  .case:nth-of-type(6n + 2) {
+    background: radial-gradient(circle at 86.6813% 34.3628%, rgb(61, 192, 252), rgb(27, 152, 210));
+    height: 100%;
+
+    @include bp-lg {
+      grid-column: 2;
+      grid-row: span 2;
+      padding-bottom: 3em;
+    }
+  }
+
+  .case:nth-of-type(6n + 3), .case:nth-of-type(6n) {
+    background: radial-gradient(circle at 16.1994% 28.0162%, rgb(201, 209, 215), rgb(241, 244, 247));
+  }
+
+  .case:nth-of-type(6n + 4) {
+    background: radial-gradient(circle at 86.6813% 34.3628%, #FFF60078, #d0b900);
+    height: 100%;
+
+    @include bp-lg {
+      grid-column: 1;
+      grid-row: span 2;
+      padding-bottom: 3em;
+    }
+  }
+
+}

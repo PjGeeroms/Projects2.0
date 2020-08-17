@@ -1,0 +1,19 @@
+contentColumnType: string
+fieldGroup: 3f9c4022-63a3-43ec-b68f-9257d269dc2f
+handle: caseFillerLink
+instructions: 'The link that will be added to the case filler'
+name: 'Case filler link'
+searchable: true
+settings:
+  allowSelfRelations: ''
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

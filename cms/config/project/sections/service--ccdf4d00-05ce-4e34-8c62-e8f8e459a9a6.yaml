@@ -1,0 +1,26 @@
+enableVersioning: true
+handle: service
+name: Service
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  92609943-d2dc-493b-938f-cfa93f95c757:
+    enabledByDefault: true
+    hasUrls: true
+    template: services/_entry
+    uriFormat: 'services/{slug}'
+structure:
+  maxLevels: 2
+  uid: fddbd25c-7512-4012-a693-98511451d98c
+type: structure

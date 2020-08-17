@@ -1,0 +1,64 @@
+version: '2'
+services:
+  # The Application
+  app:
+    build:
+      dockerfile: devops/docker/app.local.dockerfile
+      context: .
+    container_name: "bitsandbytes_app"
+    working_dir: /var/www/project/cms
+    env_file: &env
+      - ./cms/.env
+    volumes:
+      - ./cms:/var/www/project/cms:cached
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa
+      - ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub
+    depends_on:
+      - database
+
+  # The Web Server
+  web:
+    build:
+      dockerfile: devops/docker/web.dockerfile
+      context: .
+    container_name: "bitsandbytes_server"
+    working_dir: /var/www/project/cms
+    volumes_from:
+      - app
+    ports:
+      - 80:80
+
+  # The Mysql Database
+  database:
+    image: mariadb:10.3
+    container_name: "bitsandbytes_db"
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./devops/db/init:/docker-entrypoint-initdb.d
+      - ./devops/db/data:/var/lib/mysql
+    env_file:
+      *env
+    environment:
+      MYSQL_ROOT_PASSWORD: bytepass
+      MYSQL_DATABASE: project
+      MYSQL_USER: bitsandbytes
+      MYSQL_PASSWORD: bytepass
+    ports:
+      - 33061:3306
+
+  webpack:
+    build:
+      context: ./devops/docker
+      dockerfile: ./webpack.dockerfile
+    container_name: "bitsandbytes_webpack"
+    env_file:
+      *env
+    volumes:
+      - ./tsconfig:/var/www/project/tsconfig.json:cached
+      - ./buildchain:/var/www/project/buildchain:cached
+      - ./buildchain/node_modules:/var/www/project/buildchain/node_modules:delegated
+      - ./cms/web/dist:/var/www/project/cms/web/dist:delegated
+      - ./src:/var/www/project/src:cached
+      - ./cms/templates:/var/www/project/cms/templates:cached
+    ports:
+    - 8080:8080

@@ -1,0 +1,135 @@
+field: 90ad295e-1346-4e31-9f44-d3a268adec17
+fieldLayouts:
+  f15fd8cb-3202-451b-b299-f1d4bc6f5cf3:
+    tabs:
+      -
+        fields:
+          420b367d-bd9f-40fb-83ec-bf6e6c997d79:
+            required: true
+            sortOrder: 1
+          5fda5ad8-08be-45ae-a8b7-35450f849f28:
+            required: false
+            sortOrder: 5
+          6294075c-cf92-457c-81f2-b68f2a10b8d5:
+            required: false
+            sortOrder: 4
+          68614bbd-19b9-4d49-a8e8-69c4649edddf:
+            required: false
+            sortOrder: 2
+          95d1960e-0dc5-417f-896a-0c303e71f409:
+            required: false
+            sortOrder: 3
+        name: Content
+        sortOrder: 1
+fields:
+  420b367d-bd9f-40fb-83ec-bf6e6c997d79:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:41a0c76e-da4f-46f9-8796-30bccfd886de'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:4fde25c6-9e3f-43eb-aa98-e26c5f33618d'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:41a0c76e-da4f-46f9-8796-30bccfd886de'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  5fda5ad8-08be-45ae-a8b7-35450f849f28:
+    contentColumnType: string
+    fieldGroup: null
+    handle: fullWidth
+    instructions: ''
+    name: 'Full Width'
+    searchable: true
+    settings:
+      multi: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Yes'
+            -
+              - value
+              - 'true'
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Checkboxes
+  6294075c-cf92-457c-81f2-b68f2a10b8d5:
+    contentColumnType: smallint(2)
+    fieldGroup: null
+    handle: marginBottom
+    instructions: ''
+    name: 'Margin Bottom'
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: '2'
+      max: '10'
+      min: '0'
+      prefix: ''
+      size: null
+      suffix: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  68614bbd-19b9-4d49-a8e8-69c4649edddf:
+    contentColumnType: text
+    fieldGroup: null
+    handle: ratio
+    instructions: 'The ratio the image should have for example: 1/3'
+    name: Ratio
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  95d1960e-0dc5-417f-896a-0c303e71f409:
+    contentColumnType: smallint(2)
+    fieldGroup: null
+    handle: marginTop
+    instructions: ''
+    name: 'Margin Top'
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: '2'
+      max: '10'
+      min: '0'
+      prefix: ''
+      size: null
+      suffix: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+handle: image
+name: image
+sortOrder: 5

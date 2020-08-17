@@ -1,0 +1,23 @@
+enableVersioning: true
+handle: case
+name: Case
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  92609943-d2dc-493b-938f-cfa93f95c757:
+    enabledByDefault: true
+    hasUrls: true
+    template: case/_entry
+    uriFormat: 'cases/{slug}'
+type: channel

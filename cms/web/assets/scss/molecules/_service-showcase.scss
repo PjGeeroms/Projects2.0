@@ -1,0 +1,61 @@
+.service-showcase {
+  .slick-arrow {
+    display: none !important;
+  }
+  .slick-dots {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+
+    li {
+      margin: 0 .25em;
+      button {
+        border: 0;
+        background: transparent;
+        display: block;
+        height: 7px;
+        width: 7px;
+        outline: none;
+        line-height: 0px;
+        font-size: 0px;
+        color: transparent;
+        padding: 5px;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: var(--color-white);
+          opacity: .7;
+        }
+      }
+
+      &.slick-active {
+        button {
+          &::before {
+            background-color: var(--highlightcolor-primary);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  @include bp-sm {
+    grid-column-gap: 2em;
+    grid-row-gap: 5em;
+  }
+
+  @include bp-xl {
+    margin-bottom: 2em;
+  }
+}

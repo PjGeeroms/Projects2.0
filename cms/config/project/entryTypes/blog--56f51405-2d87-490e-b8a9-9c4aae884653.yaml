@@ -1,0 +1,29 @@
+fieldLayouts:
+  28cabd89-5611-4421-9f7b-e2d5a0c39019:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 53213477-b83c-443c-8c18-8e964348dd10
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: cd153850-3d4f-4606-87d7-98bd4a385a56
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c4175836-86a5-45cf-a7f5-857f125c4824
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: General
+        sortOrder: 1
+handle: blog
+hasTitleField: true
+name: Blog
+section: 0d930868-678d-495f-83f3-855f0d39fd80
+sortOrder: 1
+titleFormat: ''

@@ -1,0 +1,78 @@
+:root {
+  // --------------------------------------------------------------------------------------------------
+  // Color variables
+  // --------------------------------------------------------------------------------------------------
+  --color-black: #0B0B0B;
+  --color-white: #FFFFFF;
+  --color-o-white: rgba(255, 255, 255, .8);
+  --color-yellow: #FFF601;
+  --color-lightpurple: #9b59b6;
+  --color-purple: #8e44ad;
+  --color-verylightgrey: #f7f7f7;
+  --color-lightgrey: #595959;
+  --color-mediumgrey: #2f2f2f;
+  --color-grey: #242424;
+  --color-darkgrey: #181821;
+
+  // --------------------------------------------------------------------------------------------------
+  // Text color definitions
+  // --------------------------------------------------------------------------------------------------
+  --textcolor-primary: var(--color-lightgrey);
+  --textcolor-secondary: var(--color-o-white);
+  --highlightcolor-primary: var(--color-yellow);
+  --highlightcolor-secondary: var(--color-purple);
+
+  // --------------------------------------------------------------------------------------------------
+  // Bg color definitions
+  // --------------------------------------------------------------------------------------------------
+  --bgcolor-light: var(--color-white);
+  --bgcolor-dark: var(--color-black);
+  --bgcolor-yellow: var(--color-yellow);
+  --bgcolor-purple: var(--color-purple);
+
+  // --------------------------------------------------------------------------------------------------
+  // Element color definitions
+  // --------------------------------------------------------------------------------------------------
+
+  // Base
+  --color-viewFrame: var(--color-white);
+
+  // Menu
+  --menutoggle-bgcolor: var(--color-yellow);
+  --menutoggle-color: var(--color-black);
+  --menutoggle-bgcolor-hover: var(--color-yellow);
+  --menutoggle-color-hover: var(--color-black);
+}
+
+.is-white {
+  background-color: var(--bgcolor-light);
+  color: var(--textcolor-primary);
+}
+
+.is-light {
+  background-color: var(--color-verylightgrey);
+  color: var(--textcolor-primary);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-black);
+  }
+}
+
+.is-dark {
+  background-color: var(--bgcolor-dark);
+  color: var(--textcolor-secondary);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-white);
+  }
+}
+
+.is-purple {
+  background-color: var(--bgcolor-purple);
+  color: var(--color-white);
+}
+
+.is-yellow {
+  background-color: var(--bgcolor-yellow);
+  color: var(--color-black);
+}

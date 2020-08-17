@@ -1,0 +1,26 @@
+{
+  "name": "bitsandbytes/craft-contact-form",
+  "description": "Allow the user to have a contact form",
+  "version": "1.0.1",
+  "type": "craft-plugin",
+  "keywords": ["contact form", "craft", "bitsandbytes"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pieter-Jan Geeroms",
+      "homepage": "https://bitsandbytes.be"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "bitsandbytes\\contactForm\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Contact form",
+    "handle": "contact-form"
+  }
+}

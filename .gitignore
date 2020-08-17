@@ -1,0 +1,6 @@
+buildchain/node_modules
+devops/db/data
+node_modules
+
+.DS_Store
+.idea/

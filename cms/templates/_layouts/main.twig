@@ -1,0 +1,158 @@
+<html lang="nl">
+<head>
+    <title>Bits & Bytes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+{% set homepage = craft.entries().section('home').one().url%}
+<div id="main-nav" class="navigation-window">
+    <a href="{{ homepage }}" class="logo">
+        {% include 'includes/logo-inverted' %}
+    </a>
+    <div id="menu-close" class="navigation-close"><span></span><span></span></div>
+    <nav class="navigation">
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="{{ homepage }}">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="/services">Services</a>
+            </li>
+            <li class="menu-item">
+                <a href="/cases">Cases</a>
+            </li>
+            <li class="menu-item">
+                <a href="/blog">Blog</a>
+            </li>
+            <li class="menu-item">
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="wrapper">
+    <header id="site-header" class="site-header--fixed">
+        <div class="logo">
+            <a href="{{ homepage }}">
+                {% include 'includes/logo' %}
+            </a>
+        </div>
+        <div id="menu-open" class="mobile-toggle">
+            <span>Menu</span>
+        </div>
+    </header>
+
+    {% if removeSpacer is not defined or not removeSpacer %}
+        <div class="site-header--spacer"></div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+
+    <footer class="container--fw container@md is-dark pt-7">
+        <div class="container">
+            <div class="grid--fw px-2@lg">
+                <div class="col-12">
+                    <div class="grid pb-6">
+                        <div class="col-12 col-6@lg">
+                            <div class="box">
+                                <h2 data-aos="fade-up">{{ footerCta.footerCtaTitle }}</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 col-os-8-13@lg">
+                            <div class="box">
+                                <div class="text-offset" data-aos="fade-up" data-aos-delay="300">
+                                    <p>{{ footerCta.footerCtaDescription }}</p>
+                                    <a class="btn btn--secondary"
+                                       href="{{ footerCta.footerCtaUrl }}">{{ footerCta.footerCtaAction }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-6">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="grid pb-5 pb-10@lg">
+                        <div class="col-5 col-4@md col-2@lg">
+                            <div class="box--stack" data-aos="fade-up">
+                                {% include 'includes/logo-full-inverted' %}
+                            </div>
+                        </div>
+                        <div class="display-n col-os-4-6@lg display-b@lg">
+                            <div class="box">
+                                <ul class="footer-menu">
+                                    <li data-aos="fade-up">
+                                        <a href="#">Content</a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">Structure</a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">Design</a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">Development</a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">Marketing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="display-n col-os-7-8@lg display-b@lg">
+                            <div class="box">
+                                <ul class="footer-menu">
+                                    <li data-aos="fade-up">
+                                        <a href="#">Cases</a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">Blog</a>
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3 col-os-8-13@md mt-0@md col-os-10-13@lg">
+                            <form class="quick-form dark-form" action="#">
+                                <h6 aos="fade-up">Get in touch!</h6>
+                                <input class="max-50 max-100@md" type="email" required placeholder="E-mailadres" data-aos="fade-up" data-aos-delay="100">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="grid pb-4">
+                        <div class="col-12">
+                            <div class="copyright">
+                                Copyright &copy; 2014-2020.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+{# jQuery#}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+{# Header & Mobile menu #}
+<script type="text/javascript" src="/assets/js/dynamicHeader.js"></script>
+<script type="text/javascript" src="/assets/js/mobile-menu.js"></script>
+
+{# Node AOS#}
+<script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
+<script type="text/javascript" src="/assets/js/initAos.js"></script>
+
+{% block js %}
+    {# Placeholder for page specific scripts #}
+{% endblock %}
+
+</body>
+</html>

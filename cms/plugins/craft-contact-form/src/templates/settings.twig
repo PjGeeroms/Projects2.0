@@ -1,0 +1,21 @@
+{% import '_includes/forms' as forms %}
+
+{{ forms.textField({
+    label: 'From Email',
+    name: 'fromEmail',
+    value: settings.fromEmail,
+}) }}
+
+{{ forms.textField({
+    label: 'To Email',
+    name: 'toEmail',
+    value: settings.toEmail,
+}) }}
+
+{{ forms.textField({
+    label: 'Subject',
+    name: 'subject',
+    value: settings.subject,
+}) }}
+
+

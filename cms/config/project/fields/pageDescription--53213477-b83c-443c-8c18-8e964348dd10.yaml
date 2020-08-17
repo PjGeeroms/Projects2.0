@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: aa2b22c3-a5a2-4756-8b4c-55d7606a8781
+handle: pageDescription
+instructions: 'The description of the service will be shown under the h1.'
+name: 'Page description'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Simple.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

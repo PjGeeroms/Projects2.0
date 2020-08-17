@@ -1,0 +1,261 @@
+// Usage: @include responsive-ratio(16,9);
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote( ( $y / $x ) * 100 + '%' );
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+
+@mixin paddings($size: null) {
+  @for $i from 0 through 20 {
+    @if($size) {
+      &.pt-#{$i}\@#{$size} {
+        padding-top: $i * 1rem;
+      }
+
+      &.pr-#{$i}\@#{$size} {
+        padding-right: $i * 1rem;
+      }
+
+      &.pb-#{$i}\@#{$size} {
+        padding-bottom: $i * 1rem;
+      }
+
+      &.pl-#{$i}\@#{$size} {
+        padding-left: $i * 1rem;
+      }
+
+      &.py-#{$i}\@#{$size} {
+        padding-top: $i * 1rem;
+        padding-bottom: $i * 1rem;
+      }
+
+      &.px-#{$i}\@#{$size} {
+        padding-left: $i * 1rem;
+        padding-right: $i * 1rem;
+      }
+    }
+    @else {
+      &.pt-#{$i} {
+        padding-top: $i * 1rem;
+      }
+
+      &.pr-#{$i} {
+        padding-right: $i * 1rem;
+      }
+
+      &.pb-#{$i} {
+        padding-bottom: $i * 1rem;
+      }
+
+      &.pl-#{$i} {
+        padding-left: $i * 1rem;
+      }
+
+      &.py-#{$i} {
+        padding-top: $i * 1rem;
+        padding-bottom: $i * 1rem;
+      }
+
+      &.px-#{$i} {
+        padding-left: $i * 1rem;
+        padding-right: $i * 1rem;
+      }
+    }
+  }
+}
+
+@mixin margins($size: null) {
+  @for $i from 0 through 20 {
+    @if($size) {
+      &.mt-#{$i}\@#{$size} {
+        margin-top: $i * 1rem;
+      }
+
+      &.mr-#{$i}\@#{$size} {
+        margin-right: $i * 1rem;
+      }
+
+      &.mb-#{$i}\@#{$size} {
+        margin-bottom: $i * 1rem;
+      }
+
+      &.ml-#{$i}\@#{$size} {
+        margin-left: $i * 1rem;
+      }
+
+      &.my-#{$i}\@#{$size} {
+        margin-top: $i * 1rem;
+        margin-bottom: $i * 1rem;
+      }
+
+      &.mx-#{$i}\@#{$size} {
+        margin-left: $i * 1rem;
+        margin-right: $i * 1rem;
+      }
+    }
+    @else {
+      &.mt-#{$i} {
+        margin-top: $i * 1rem;
+      }
+
+      &.mr-#{$i} {
+        margin-right: $i * 1rem;
+      }
+
+      &.mb-#{$i} {
+        margin-bottom: $i * 1rem;
+      }
+
+      &.ml-#{$i} {
+        margin-left: $i * 1rem;
+      }
+
+      &.my-#{$i} {
+        margin-top: $i * 1rem;
+        margin-bottom: $i * 1rem;
+      }
+
+      &.mx-#{$i} {
+        margin-left: $i * 1rem;
+        margin-right: $i * 1rem;
+      }
+    }
+  }
+}
+
+@mixin negative-margins($size:null) {
+  @for $i from 0 through 20 {
+    @if($size) {
+      &.mt--#{$i}\@#{$size} {
+        margin-top: $i * -1rem;
+      }
+
+      &.mr--#{$i}\@#{$size} {
+        margin-right: $i * -1rem;
+      }
+
+      &.mb--#{$i}\@#{$size} {
+        margin-bottom: $i * -1rem;
+      }
+
+      &.ml--#{$i}\@#{$size}{
+        margin-left: $i * -1rem;
+      }
+
+      &.my--#{$i}\@#{$size} {
+        margin-top: $i * -1rem;
+        margin-bottom: $i * -1rem;
+      }
+
+      &.mx--#{$i}\@#{$size} {
+        margin-left: $i * -1rem;
+        margin-right: $i * -1rem;
+      }
+    }
+    @else {
+      &.mt--#{$i} {
+        margin-top: $i * -1rem;
+      }
+
+      &.mr--#{$i} {
+        margin-right: $i * -1rem;
+      }
+
+      &.mb--#{$i} {
+        margin-bottom: $i * -1rem;
+      }
+
+      &.ml--#{$i} {
+        margin-left: $i * -1rem;
+      }
+
+      &.my--#{$i} {
+        margin-top: $i * -1rem;
+        margin-bottom: $i * -1rem;
+      }
+
+      &.mx--#{$i} {
+        margin-left: $i * -1rem;
+        margin-right: $i * -1rem;
+      }
+    }
+  }
+}
+
+@mixin max-width($size: null) {
+  @if($size) {
+    .max-25\@#{$size} {
+      max-width: 25%;
+    }
+    .max-50\@#{$size} {
+      max-width: 50%;
+    }
+    .max-65\@#{$size} {
+      max-width: 65%;
+    }
+    .max-75\@#{$size} {
+      max-width: 75%;
+    }
+    .max-85\@#{$size} {
+      max-width: 85%;
+    }
+    .max-100\@#{$size} {
+      max-width: 100%;
+    }
+  }
+  @else {
+    .max-25 {
+      max-width: 25%;
+    }
+    .max-50 {
+      max-width: 50%;
+    }
+    .max-65 {
+      max-width: 65%;
+    }
+    .max-75 {
+      max-width: 75%;
+    }
+    .max-85 {
+      max-width: 85%;
+    }
+  }
+}
+
+@mixin display($size: null) {
+  @if($size) {
+    .display-b\@#{$size} {
+      display: block;
+    }
+    .display-f\@#{$size} {
+      display: flex;
+    }
+  }
+  @else {
+    .display-b {
+      display: block;
+    }
+    .display-f {
+      display: flex;
+    }
+  }
+}
+@mixin display-none($size: null) {
+  @if($size) {
+    .display-n\@#{$size} {
+      display: none;
+    }
+  }
+  @else {
+    .display-n {
+      display: none;
+    }
+  }
+}

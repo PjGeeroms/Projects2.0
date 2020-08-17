@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 037eacd4-089c-4f57-895b-b2180c010c59
+handle: pageIntroduction
+instructions: 'The text displayed on the top of the page in the <h1>'
+name: 'Page introduction'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'The greatest title'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

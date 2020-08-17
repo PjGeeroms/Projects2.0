@@ -1,0 +1,26 @@
+{
+  "name": "bitsandbytes/craft-case-organizer",
+  "description": "Allow the user to organize the case entity",
+  "version": "1.0.1",
+  "type": "craft-plugin",
+  "keywords": ["case", "organizer", "craft", "bitsandbytes"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pieter-Jan Geeroms",
+      "homepage": "https://bitsandbytes.be"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "bitsandbytes\\caseOrganizer\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Case Organizer",
+    "handle": "case-organizer"
+  }
+}

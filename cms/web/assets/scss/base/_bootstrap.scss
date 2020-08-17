@@ -1,0 +1,101 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 0;
+  max-width: var(--grid-max); // Standard content width is limited
+  margin: 0 auto;
+
+  &--fw {
+    @extend .grid;
+    max-width: 100%;
+  }
+
+  @include grid-col();
+
+  @include bp-sm {
+    @include grid-col('sm');
+  }
+
+  @include bp-md {
+    @include grid-col('md');
+  }
+
+  @include bp-lg {
+    @include grid-col('lg');
+  }
+
+  @include bp-xl {
+    @include grid-col('xl');
+  }
+
+  @include bp-xxl {
+    @include grid-col('xxl');
+  }
+
+}
+
+// Bootstrap responsive styles
+@include container();
+@include grid();
+@include paddings();
+@include margins();
+@include negative-margins();
+@include max-width();
+@include display();
+@include display-none();
+
+@include bp-sm {
+  @include container('sm');
+  @include grid('sm');
+  @include paddings('sm');
+  @include margins('sm');
+  @include negative-margins('sm');
+  @include max-width('sm');
+  @include display('sm');
+  @include display-none('sm');
+}
+
+@include bp-md {
+  @include container('md');
+  @include grid('md');
+  @include paddings('md');
+  @include margins('md');
+  @include negative-margins('md');
+  @include max-width('md');
+  @include display('md');
+  @include display-none('md');
+}
+
+@include bp-lg {
+  @include container('lg');
+  @include grid('lg');
+  @include paddings('lg');
+  @include margins('lg');
+  @include negative-margins('lg');
+  @include max-width('lg');
+  @include display('lg');
+  @include display-none('lg');
+}
+
+@include bp-xl {
+  @include container('xl');
+  @include grid('xl');
+  @include paddings('xl');
+  @include margins('xl');
+  @include negative-margins('xl');
+  @include max-width('xl');
+  @include display('xl');
+  @include display-none('xl');
+}
+
+@include bp-xxl {
+  @include container('xxl');
+  @include grid('xxl');
+  @include paddings('xxl');
+  @include margins('xxl');
+  @include negative-margins('xxl');
+  @include max-width('xxl');
+  @include display('xxl');
+  @include display-none('xxl');
+}

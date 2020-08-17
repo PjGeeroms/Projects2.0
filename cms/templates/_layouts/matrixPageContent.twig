@@ -1,0 +1,14 @@
+{% for block in entry.pageContent.all() %}
+    {% switch block.type %}
+    {% case "procesOverview" %}
+        {% include "_layouts/processOverviewSection" %}
+    {% case "yellowCtaDescription" %}
+        {% include "_layouts/yellowCtaSection.twig" %}
+    {% case "casesOverview" %}
+        {% include "_layouts/casesOverviewSection.twig" %}
+    {% case "titleText" %}
+        {% include "_layouts/titleText.twig" %}
+    {% case "image" %}
+        {% include "_layouts/image.twig" %}
+    {% endswitch %}
+{% endfor %}

@@ -1,0 +1,44 @@
+{% import '_includes/forms' as forms %}
+
+{{ forms.lightswitchField({
+    label: 'Show section',
+    instructions: 'Enable or disable the menu section of the plugin',
+    name: 'showSection',
+    on: settings.showSection,
+    first: true,
+}) }}
+
+{{ forms.textField({
+    label: 'API KEY',
+    instructions: 'The api key required for making calls to the Ticketmaster Discovery API',
+    name: 'apiKey',
+    value: settings.apiKey,
+}) }}
+
+{{ forms.colorField({
+    label: 'Text Color',
+    name: 'textColor',
+    value: settings.textColor,
+}) }}
+
+{{ forms.selectField({
+    label: 'Countries',
+    name: 'countries',
+    value: 'countries',
+    options: settings.countries,
+}) }}
+
+{{ forms.textareaField({
+    label: 'Description',
+    name: 'description',
+    value: settings.description,
+    rows: 10
+}) }}
+
+{{ forms.timeField({
+    label: 'Time',
+    name: 'time',
+    value: settings.time,
+    minuteIncrement: 39
+}) }}
+

@@ -1,0 +1,36 @@
+/**
+ * Livestream Module module for Craft CMS
+ *
+ * Livestream Module CSS
+ *
+ * @author    Pieter-Jan Geeroms
+ * @copyright Copyright (c) 2020 Pieter-Jan Geeroms
+ * @link      https://bitsandbytes.be
+ * @package   LivestreamModule
+ * @since     1.0.0
+ */
+
+body.login {
+    background-color: #222;
+}
+
+#login-form h1 {
+    color: #fff !important;
+}
+
+body.login label, body.login #forgot-password {
+    color: #fff;
+}
+
+#login-form .btn.submit {
+    background-color: #FFF601 !important;
+    color: #222 !important;
+}
+
+#login-form .btn.submit.disabled {
+    opacity: .5;
+}
+
+#login-fields .field .input {
+    margin-bottom: 1rem;
+}

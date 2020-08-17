@@ -1,0 +1,96 @@
+field: 90ad295e-1346-4e31-9f44-d3a268adec17
+fieldLayouts:
+  6e30cfb7-9da4-43a1-be5e-a17f76891a06:
+    tabs:
+      -
+        fields:
+          2194bdc6-04b1-4968-9a4c-ed4443c8ade9:
+            required: false
+            sortOrder: 2
+          76e1369e-7ba7-46c1-adf5-ad4ac074d9bb:
+            required: false
+            sortOrder: 3
+          df18fae5-9d81-4707-8677-d860d2bdd348:
+            required: false
+            sortOrder: 4
+          ea46b61e-8530-4f21-aa0c-ae4458823351:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2194bdc6-04b1-4968-9a4c-ed4443c8ade9:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: ctaUrl
+    instructions: ''
+    name: 'CTA Url'
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: 'https://goog.le'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  76e1369e-7ba7-46c1-adf5-ad4ac074d9bb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaDescription
+    instructions: 'This is shown next to the yellow CTA box'
+    name: 'CTA Description'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  df18fae5-9d81-4707-8677-d860d2bdd348:
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaAction
+    instructions: 'The text on the CTA button'
+    name: 'CTA Action'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Call us'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ea46b61e-8530-4f21-aa0c-ae4458823351:
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaTitle
+    instructions: ''
+    name: 'CTA Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: yellowCtaDescription
+name: 'Yellow CTA + Description'
+sortOrder: 2

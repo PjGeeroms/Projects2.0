@@ -1,0 +1,8 @@
+handle: images
+hasUrls: true
+name: Images
+settings:
+  path: '@webroot/assets/images/uploads'
+sortOrder: 2
+type: craft\volumes\Local
+url: '@web/assets/images/uploads'

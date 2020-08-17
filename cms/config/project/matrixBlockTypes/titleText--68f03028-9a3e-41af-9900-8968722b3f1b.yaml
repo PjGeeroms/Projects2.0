@@ -1,0 +1,108 @@
+field: 90ad295e-1346-4e31-9f44-d3a268adec17
+fieldLayouts:
+  6f295fbb-2ed2-4554-aa92-6f04598eeae2:
+    tabs:
+      -
+        fields:
+          039a482b-629a-4e12-8c7d-df74193a2f01:
+            required: false
+            sortOrder: 1
+          08ced5bd-4995-4664-a767-79f4c85a8ba6:
+            required: false
+            sortOrder: 3
+          b5f50e92-6d1c-443a-86dd-71dc7786c7dc:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  039a482b-629a-4e12-8c7d-df74193a2f01:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionTitle
+    instructions: ''
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  08ced5bd-4995-4664-a767-79f4c85a8ba6:
+    contentColumnType: string
+    fieldGroup: null
+    handle: colorScheme
+    instructions: ''
+    name: 'Color Scheme'
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - White
+            -
+              - value
+              - white
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Light
+            -
+              - value
+              - light
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Dark
+            -
+              - value
+              - dark
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  b5f50e92-6d1c-443a-86dd-71dc7786c7dc:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionText
+    instructions: ''
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: TextContent.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: titleText
+name: 'Title Block + Text Block'
+sortOrder: 4

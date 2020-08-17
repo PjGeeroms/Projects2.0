@@ -1,0 +1,54 @@
+field: 90ad295e-1346-4e31-9f44-d3a268adec17
+fieldLayouts:
+  525d8337-28bc-4f34-b77e-e5bb3565d9a4:
+    tabs:
+      -
+        fields:
+          9a26e841-9abc-4cf8-a6e0-91ae64faaf34:
+            required: false
+            sortOrder: 1
+          9a2d277c-5a67-40da-bba7-87c19da388aa:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  9a26e841-9abc-4cf8-a6e0-91ae64faaf34:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionTitle
+    instructions: ''
+    name: 'Section Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  9a2d277c-5a67-40da-bba7-87c19da388aa:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionDescription
+    instructions: ''
+    name: 'Section Description'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: casesOverview
+name: 'Cases Overview'
+sortOrder: 3

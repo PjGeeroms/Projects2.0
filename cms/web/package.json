@@ -1,0 +1,38 @@
+{
+  "name": "bvisible",
+  "version": "1.0.0",
+  "description": "Bvisible dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pieter-Jan Geeroms",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
+    "modularscale-sass": "^3.0.8",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "mo-js": "^0.288.2",
+    "normalize-css": "^2.3.1",
+    "normalize.css": "^8.0.1",
+    "rfs": "^9.0.3",
+    "slick-carousel": "^1.8.1",
+    "sticky-js": "^1.2.2"
+  }
+}

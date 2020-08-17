@@ -1,0 +1,102 @@
+{% extends "_layouts/main" %}
+
+{% set removeSpacer = true %}
+{% set cases = craft.entries().section('case').all() %}
+
+{% block content %}
+  <div class="container--fw container@md is-light">
+    <div class="container">
+      <div class="grid--fw my-1 pt-14 pb-6@md my-0@md px-2@lg">
+        <div class="col-12">
+          <div class="grid pb-5">
+            <div class="col-12 col-10@md col-7@lg">
+              <div class="box--stack">
+                <h1 data-aos="fade-up">{{ casesPage.pageTitle }}</h1>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    {{ casesPage.pageDescription }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Fetch cases #}
+  {% set cases = craft.entries().section('case').all() %}
+  {% set amountCases = cases | length %}
+  {% set dummies = 3 - (amountCases % 3) %}
+  {% set totalAmount = amountCases + dummies %}
+
+  <div class="container--fw container@md is-light mb-4">
+    <div class="container">
+      <div class="grid--fw">
+        <div class="col-12">
+          <div class="grid">
+            <div class="col-12">
+              <div class="cases-grid">
+                {% for case in cases %}
+                  {# The longer case needs a different image ratio #}
+                  {% set isOdd = loop.index % 2 %}
+                  {% set image = case.image.one() %}
+
+                  {% set sizes = [
+                    { width: 500 },
+                    { width: 400 },
+                    { width: 300 }
+                  ] %}
+
+                  {% if isOdd %}
+                    {% set optimized = craft.imager.transformImage(image, sizes, { ratio: 4/3, position: '100% 100%', jpegQuality: 80 }) %}
+                  {% else %}
+                    {% set optimized = craft.imager.transformImage(image, sizes, { ratio: 1/2, position: '100% 100%', jpegQuality: 80 }) %}
+                  {% endif %}
+
+                  <article class="case">
+                    <div class="case__text-block">
+                      <h3 class="case__client" data-aos="fade-up">{{case.client}}</h3>
+                      <h2 class="case__title" data-aos="fade-up" data-aos-delay="100">{{ case.title }}</h2>
+                    </div>
+                    <div class="case__case-image">
+                      <img src="{{ craft.imager.placeholder({ width: 320, height: 180 }) }}"
+                           sizes="100vw"
+                           srcset="{{ craft.imager.srcset(optimized) }}">
+                    </div>
+                  </article>
+                {% endfor %}
+
+                {% if dummies < 3 %}
+                  {% for item in range(1, dummies) %}
+                    {#
+                      Because we want to know if the case is a tall block or a small one we want to know the position
+                      and calculate weither it's odd or even (even blocks are the tall ones).
+                      Then we can set a different placeholder image for the large blocks.
+                    #}
+                    {% set currentIndex = amountCases + item %}
+                    {% set isOdd = currentIndex % 2 %}
+
+                    <article class="case">
+                      <div class="case__text-block">
+                        <h3 class="case__client" data-aos="fade-up">{{ casesPage.caseFillerTitle }}</h3>
+                        <h2 class="case__title" data-aos="fade-up" data-aos-delay="100">{{ casesPage.caseFillerSub }}</h2>
+                      </div>
+                      <div class="case__case-image">
+                        {% if isOdd %}
+                          <img src="{{ casesPage.caseFillerImage1.one().url }}">
+                        {% else %}
+                          <img src="{{ casesPage.caseFillerImage2.one().url }}">
+                        {% endif %}
+                      </div>
+                      <a href="{{ casesPage.caseFillerLink.one().url }}" class="extend-link"></a>
+                    </article>
+                  {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

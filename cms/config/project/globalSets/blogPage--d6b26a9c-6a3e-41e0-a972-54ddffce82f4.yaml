@@ -1,0 +1,15 @@
+fieldLayouts:
+  26ab0aaa-1e63-4a3b-85aa-1f823deb1ae5:
+    tabs:
+      -
+        fields:
+          4692033e-4b14-49b0-a854-7650bfbdee3f:
+            required: false
+            sortOrder: 1
+          53213477-b83c-443c-8c18-8e964348dd10:
+            required: false
+            sortOrder: 2
+        name: General
+        sortOrder: 1
+handle: blogPage
+name: 'Blog page'

@@ -1,0 +1,54 @@
+field: 90ad295e-1346-4e31-9f44-d3a268adec17
+fieldLayouts:
+  b422aa60-bb90-46a5-aab1-92b6b6564d15:
+    tabs:
+      -
+        fields:
+          17f4efdf-f80d-4501-82d8-f49a9950c797:
+            required: true
+            sortOrder: 1
+          30c471fe-eb4a-415a-82d5-c132109fa9ad:
+            required: true
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  17f4efdf-f80d-4501-82d8-f49a9950c797:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionTitle
+    instructions: ''
+    name: 'Section Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Some awesome title'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  30c471fe-eb4a-415a-82d5-c132109fa9ad:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionDescription
+    instructions: ''
+    name: 'Section Description'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'The most awesome description'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: procesOverview
+name: 'Proces Overview'
+sortOrder: 1

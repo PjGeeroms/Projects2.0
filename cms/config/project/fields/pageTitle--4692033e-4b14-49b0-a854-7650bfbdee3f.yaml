@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: aa2b22c3-a5a2-4756-8b4c-55d7606a8781
+handle: pageTitle
+instructions: 'The h1 of the service page.'
+name: 'Page title'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

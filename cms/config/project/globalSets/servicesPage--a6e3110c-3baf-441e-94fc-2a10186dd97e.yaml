@@ -1,0 +1,15 @@
+fieldLayouts:
+  c0da0d60-21a9-4a16-8f98-0c8354c06ff0:
+    tabs:
+      -
+        fields:
+          4692033e-4b14-49b0-a854-7650bfbdee3f:
+            required: false
+            sortOrder: 1
+          53213477-b83c-443c-8c18-8e964348dd10:
+            required: false
+            sortOrder: 2
+        name: General
+        sortOrder: 1
+handle: servicesPage
+name: 'Services Page'

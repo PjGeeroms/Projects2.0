@@ -1,0 +1,71 @@
+dateModified: 1597483549
+email:
+  fromEmail: pieterjan@bitsandbytes.be
+  fromName: 'Bits & Bytes'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  case-organizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      fromEmail: website@bitsandbytes.be
+      redirectUrl:
+        - '215'
+      subject: 'Contact formulier'
+      toEmail: pieterjan@bitsandbytes.be
+  imager-x:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.0.0
+  incognito-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.1
+  internal-assets:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  matrixmate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.9
+  ticketmaster:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      apiKey: 'Some API Key'
+      showSection: '1'
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Bits & Bytes'
+  schemaVersion: 3.5.12
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

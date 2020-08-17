@@ -1,0 +1,21 @@
+fieldLayouts:
+  d2347a54-a152-4b5d-b50d-82da4134437a:
+    tabs:
+      -
+        fields:
+          377a32ad-e717-4e65-adce-9d748466a968:
+            required: false
+            sortOrder: 4
+          63f0b5a4-09af-464e-9bf4-c55afd7be8ad:
+            required: false
+            sortOrder: 1
+          aafc3a75-a5b9-47c9-a100-50544eefe654:
+            required: false
+            sortOrder: 2
+          d6feef47-dd75-4f59-b4eb-d21a9af2e636:
+            required: false
+            sortOrder: 3
+        name: General
+        sortOrder: 1
+handle: footerCta
+name: 'Footer CTA'

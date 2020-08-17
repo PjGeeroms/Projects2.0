@@ -1,0 +1,136 @@
+@mixin grid($size: null) {
+  @for $i from 1 through 11 {
+    @if($size) {
+      .grid-#{$i}\@#{$size} {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        grid-column-gap: 1em;
+        grid-row-gap: 0;
+        max-width: var(--grid-max); // Standard content width is limited
+        margin: 0 auto;
+      }
+
+      .grid-#{$i}--fw\@#{$size} {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        grid-column-gap: 1em;
+        grid-row-gap: 0;
+        max-width: 100%;
+      }
+
+      .grid-gap-col-#{$i}\@#{$size} {
+        grid-column-gap: $i * 1em;
+      }
+
+      .grid-gap-col-#{$i}\@#{$size} {
+        grid-row-gap: $i * 1em;
+      }
+
+      .grid-gap-#{$i}\@#{$size} {
+        grid-column-gap: $i * 1em;
+        grid-row-gap: $i * 1em;
+      }
+    }
+    @else {
+      .grid-#{$i} {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        grid-column-gap: 1em;
+        grid-row-gap: 0;
+        max-width: var(--grid-max); // Standard content width is limited
+        margin: 0 auto;
+      }
+
+      .grid-gap-col-#{$i} {
+        grid-column-gap: $i * 1em;
+      }
+
+      .grid-gap-row-#{$i} {
+        grid-row-gap: $i * 1em;
+      }
+
+      .grid-gap-#{$i} {
+        grid-column-gap: $i * 1em;
+        grid-row-gap: $i * 1em;
+      }
+
+      .grid-#{$i}--fw {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        grid-column-gap: 1em;
+        grid-row-gap: 0;
+        max-width: 100%;
+      }
+    }
+  }
+}
+@mixin grid-col($size: null) {
+    @for $i from 1 through 12 {
+      @if($size) {
+        .col-#{$i}\@#{$size} {
+          grid-column: span $i;
+
+          @if($debug) {
+            border-left: 1px dashed #83D0F5;
+            border-right: 1px dashed #83D0F5;
+          }
+        }
+
+        @for $j from 0 through 13 {
+          .col-os-#{$i}-#{$j}\@#{$size} {
+            grid-column: unquote($i + "/" + $j);
+          }
+        }
+      }
+      @else {
+        .col-#{$i} {
+          grid-column: span $i;
+
+          @if($debug) {
+            border-left: 1px dashed #83D0F5;
+            border-right: 1px dashed #83D0F5;
+          }
+        }
+
+        @for $j from 0 through 13 {
+          .col-os-#{$i}-#{$j} {
+            grid-column: unquote($i + "/" + $j);
+          }
+        }
+      }
+    }
+}
+
+%container {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: calc(100% - 40px);
+}
+@mixin container($size: null) {
+  @if($size){
+    .container\@#{$size} {
+      margin-left: 20px;
+      margin-right: 20px;
+      width: calc(100% - 40px);
+
+      &--fw\@#{$size} {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+  @else {
+    .container {
+      margin-left: 20px;
+      margin-right: 20px;
+      width: calc(100% - 40px);
+
+      &--fw {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+}

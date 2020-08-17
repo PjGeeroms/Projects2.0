@@ -1,0 +1,36 @@
+    {% set fullWidth = block.fullWidth %}
+
+    {% if fullWidth|length %}
+        <div class="container--fw container@md">
+            <div class="grid--fw">
+                <div class="col-12">
+    {% else %}
+        <div class="container--fw container@md mb-4">
+            <div class="container">
+                <div class="grid--fw">
+                    <div class="col-12">
+    {% endif %}
+                <picture class="image-block__image">
+                    {% set image = block.image.one() %}
+                    {% set sizes = [
+                        { width: 1400 },
+                        { width: 1000 },
+                        { width: 800 },
+                        { width: 500 },
+                        { width: 400 }
+                    ] %}
+                    {% set optimized = craft.imager.transformImage(image, sizes, { ratio: block.ratio, position: '100% 100%', jpegQuality: 80 }) %}
+                    <img src="{{ craft.imager.placeholder({ width: 320, height: 180 }) }}"
+                         sizes="100vw"
+                         srcset="{{ craft.imager.srcset(optimized) }}">
+                </picture>
+                        {% if fullWidth | length %}
+            </div>
+        </div>
+    </div>
+            {% else %}
+        </div>
+            </div>
+            </div>
+            </div>
+            {% endif %}

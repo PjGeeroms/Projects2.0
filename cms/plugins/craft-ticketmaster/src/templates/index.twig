@@ -1,0 +1,53 @@
+{% extends '_layouts/cp' %}
+{% import '_includes/forms' as forms %}
+{% set title = 'Ticketmaster Integration' %}
+
+{% set tabs = {
+    intro: { label: "General", url: '#general' },
+    feedback: { label: "Feedback", url: '#feedback' },
+} %}
+
+{% block content %}
+    {% set apiKey = craft.app.plugins.getPlugin('ticketmaster').settings.apiKey %}
+    <div id="general">
+        {{ apiKey }}
+    </div>
+    <div id="feedback" class="hidden">
+
+        <form method="POST" action="">
+            {{ csrfInput() }}
+
+            {{ forms.hidden({
+                name: 'action',
+                value: 'ticketmaster/feedback/send'
+            }) }}
+            {{ forms.textField({
+                label: 'Subject',
+                name: 'subject',
+                value: '',
+                instructions: 'Enter your subject here'
+            }) }}
+
+            {{ forms.selectField({
+                label: 'Topic',
+                name: 'topic',
+                options: {
+                    question: 'Question',
+                    feedback: 'Feedback',
+                },
+                instructions: 'Choose your topic'
+            }) }}
+
+            {{ forms.textareaField({
+                label: 'Message',
+                name: 'message',
+                value: '',
+                instructions: 'Enter your message',
+                rows: 10,
+            }) }}
+
+            <button type="submit" class="btn submit">Send</button>
+        </form>
+
+    </div>
+{% endblock %}

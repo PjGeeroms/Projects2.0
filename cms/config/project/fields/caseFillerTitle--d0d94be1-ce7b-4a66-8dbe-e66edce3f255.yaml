@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 3f9c4022-63a3-43ec-b68f-9257d269dc2f
+handle: caseFillerTitle
+instructions: 'The title used in the case fillers'
+name: 'Case filler title'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

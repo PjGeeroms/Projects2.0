@@ -1,0 +1,74 @@
+// --------------------------------------------------------------------------------------------------
+// Grid declarations
+// --------------------------------------------------------------------------------------------------
+$max-width: 90rem; // 1440px
+$desktop-bp: 71.25rem; // 1140px
+$tablet-landscape-bp: 60rem; // 960px
+$tablet-portrait-bp: 42.5rem; // 680px
+$phone-landscape-bp: 30rem; // 480px
+$phone-portrait-bp: 20rem; // 320px
+
+// --------------------------------------------------------------------------------------------------
+// Min-width Breakpoints
+// --------------------------------------------------------------------------------------------------
+
+@mixin bp-max {
+  @media (min-width: $max-width) { @content; }
+}
+@mixin bp-xxl {
+  @include bp-max { @content; }
+}
+@mixin bp-desktop {
+  @media (min-width: $desktop-bp) { @content; }
+}
+@mixin bp-xl {
+  @include bp-desktop { @content; }
+}
+@mixin bp-tablet-landscape {
+  @media (min-width: $tablet-landscape-bp) { @content; }
+}
+@mixin bp-lg {
+  @include bp-tablet-landscape { @content; }
+}
+@mixin bp-tablet-portrait {
+  @media (min-width: $tablet-portrait-bp) { @content; }
+}
+@mixin bp-md {
+  @include bp-tablet-portrait { @content; }
+}
+@mixin bp-mobile-landscape {
+  @media (min-width: $phone-landscape-bp) { @content; }
+}
+@mixin bp-sm {
+  @include bp-mobile-landscape { @content; }
+}
+@mixin bp-mobile-portrait {
+  @media (min-width: $phone-portrait-bp) { @content; }
+}
+
+@mixin bp-navigation-helper {
+  @include bp-tablet-portrait { @content; }
+}
+
+// --------------------------------------------------------------------------------------------------
+// Max-width Breakpoints
+// --------------------------------------------------------------------------------------------------
+
+@mixin bp-m-max {
+  @media (max-width: $max-width) { @content; }
+}
+@mixin bp-m-desktop {
+  @media (max-width: $desktop-bp) { @content; }
+}
+@mixin bp-m-tablet-landscape {
+  @media (max-width: $tablet-landscape-bp) { @content; }
+}
+@mixin bp-m-tablet-portrait {
+  @media (max-width: $tablet-portrait-bp) { @content; }
+}
+@mixin bp-m-mobile-landscape {
+  @media (max-width: $phone-landscape-bp) { @content; }
+}
+@mixin bp-m-mobile-portrait {
+  @media (max-width: $phone-portrait-bp) { @content; }
+}

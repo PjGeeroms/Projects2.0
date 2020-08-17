@@ -1,0 +1,174 @@
+form {
+  input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input[type="password"], textarea {
+    outline: none;
+    border: none;
+    padding: 1em;
+    border-radius: 2px;
+  }
+
+  fieldset {
+    display: block;
+    width: 100%;
+  }
+
+  input {
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  label.has-checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding: .5rem 0;
+
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      &:checked ~ .checkmark {
+        background-color: var(--color-lightpurple);
+      }
+    }
+
+    .checkmark {
+      position: relative;
+      margin-right: 1rem;
+      height: 25px;
+      width: 25px;
+      background-color: #ddd;
+      transition: background-color .3s ease-in-out;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+
+        left: 10px;
+        top: 7px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    &:hover {
+      input[type="checkbox"] ~ .checkmark {
+        background-color: var(--color-lightgrey);
+      }
+      input[type="checkbox"]:checked ~ .checkmark {
+        background-color: var(--color-purple);
+      }
+    }
+  }
+
+  .field-group {
+    position: relative;
+    display: flex;
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &--row {
+      @extend .field-group;
+      flex-direction: row;
+
+      & > * {
+        margin-right: 4rem;
+      }
+    }
+
+    .error {
+      @include font-size(.85rem);
+      color: red;
+      margin-left: 1rem;
+      margin-top: .3rem;
+      margin-bottom: .7rem;
+      line-height: 1;
+      display: none;
+    }
+  }
+
+  &.light-form {
+    input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input[type="password"], textarea {
+      border: 1px solid #ececec;
+      color: var(--color-lightgrey);
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  &.dark-form {
+    input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"], input[type="password"], textarea {
+      background-color: var(--color-grey);
+      color: var(--textcolor-secondary);
+    }
+  }
+
+  button[type="submit"], input[type="submit"] {
+    background: transparent;
+    margin-top: 2.5rem;
+
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 3px;
+    transition: background-color .3s ease-in-out, color .4s ease-in-out;
+
+    background: var(--color-lightpurple);
+    color: var(--color-o-white);
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--color-purple);
+      color: var(--color-white);
+
+    }
+
+    &:disabled {
+      &:hover {
+        background: var(--color-lightpurple);
+        color: var(--color-o-white);
+        cursor: default;
+      }
+    }
+  }
+
+  #messageBox {
+    background-color: #2ecc71;
+    color: var(--color-white);
+    padding: 1rem;
+    border-radius: 3px;
+    margin-top: 3rem;
+    width: 100%;
+    display: none;
+
+    &.is-error {
+      background-color: #e74c3c;
+    }
+  }
+}

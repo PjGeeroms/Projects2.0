@@ -1,0 +1,26 @@
+{
+  "name": "bitsandbytes/craft-ticketmaster",
+  "description": "Ticketmaster Discovery integration for Craft",
+  "version": "1.0.0",
+  "type": "craft-plugin",
+  "keywords": ["ticketmaster", "craft", "bitsandbytes"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pieter-Jan Geeroms",
+      "homepage": "https://bitsandbytes.be"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "bitsandbytes\\ticketmaster\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Ticketmaster",
+    "handle": "ticketmaster"
+  }
+}

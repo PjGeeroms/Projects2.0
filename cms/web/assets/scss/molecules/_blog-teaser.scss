@@ -1,0 +1,126 @@
+.case-teaser {
+  position: relative;
+
+  &:hover {
+    .case-teaser__content {
+      padding-bottom: 3.5rem;
+    }
+
+    .case-teaser__see-more {
+      transform: translateY(0);
+      opacity: 1;
+      svg {
+        animation-name: translateHorizontalPulse;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-out;
+      }
+    }
+  }
+
+  picture {
+    display: block;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      min-height: 400px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    z-index: 2;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2em;
+
+    transition: all .4s cubic-bezier(.23,1,.32,1);
+
+    .badge {
+      display: inline-block;
+      @include font-size(.75rem);
+      text-transform: uppercase;
+      background-color: var(--highlightcolor-primary);
+      color: var(--color-black);
+      font-weight: 600;
+      line-height: 1;
+      padding: .3rem .6rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: .75rem;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-weight: 600;
+      margin-left: 0;
+      color: var(--color-white);
+      text-shadow: 2px 1px 8px rgba(0,0,0,.15);
+      margin: 0;
+    }
+
+    p {
+      color: var(--color-white);
+      font-size: 1rem;
+    }
+
+    .extend-link {
+      &::after {
+        transition: all .5s cubic-bezier(.23,1,.32,1);
+        background-image: linear-gradient(180deg,rgba(0,0,0,.025),rgba(0,0,0,.95));
+        background: linear-gradient(180deg,transparent,rgba(0,0,0,.5));
+        opacity: .1;
+        z-index: -1;
+      }
+      &:hover {
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__see-more {
+    color: var(--color-white);
+    transform: translateY(5rem);
+    opacity: 0;
+    transition: all .5s cubic-bezier(.23,1,.32,1);
+    margin-top: .5rem;
+    font-size: .9rem;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+
+    svg {
+      display: block;
+      width: 1rem;
+      height: auto;
+      fill: white;
+      margin-left: .5rem;
+    }
+  }
+
+  @keyframes translateHorizontalPulse {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(.5rem);
+    }
+  }
+
+}

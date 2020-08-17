@@ -1,0 +1,19 @@
+contentColumnType: text
+fieldGroup: 3f9c4022-63a3-43ec-b68f-9257d269dc2f
+handle: caseOrder
+instructions: ''
+name: 'Case Order'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  mode: hidden
+  modeOverride: ''
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: mmikkel\incognitofield\fields\IncognitoFieldType

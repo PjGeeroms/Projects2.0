@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: 61717814-12b0-4e5b-b6b0-ad85adece962
+handle: footerCtaUrl
+instructions: ''
+name: 'Footer Cta Url'
+searchable: true
+settings:
+  maxLength: '255'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

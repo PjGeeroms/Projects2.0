@@ -1,0 +1,33 @@
+{% extends "_layouts/generic-page-layout.twig" %}
+
+{% block content %}
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <div class="box--stack pt-5 pb-6 pt-10@md pb-15@md" data-aos="fade-up">
+                    <h1 class="max-85@lg text-xl bg-black p-4">{{ entry.pageIntroduction }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container--fw container@md">
+        <div class="grid--fw">
+            <div class="col-12">
+                <div class="video-wrapper">
+                    <video autoplay loop>
+                        <source src="{{entry.heroVideo.one().url}}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "_layouts/matrixPageContent" %}
+
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="./node_modules/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./assets/js/service-slider.js"></script>
+{% endblock %}

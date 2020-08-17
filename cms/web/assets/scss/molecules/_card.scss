@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+
+  &.is-dark {
+    color: var(--color-o-white);
+  }
+
+  &__image {
+    image, svg {
+      display: inline-block;
+      background-color: var(--color-white);
+      width: 100%;
+      height: auto;
+      padding: 5em;
+    }
+  }
+  &__title {
+
+  }
+  &__content {
+    @include font-size(1rem);
+    margin-bottom: 2em;
+
+    p {
+      font-size: inherit;
+    }
+  }
+  &__read-more {
+    position: absolute;
+    bottom: 0;
+
+    a {
+      color: var(--color-o-white);
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      position: relative;
+      font-size: .875rem;
+      transition: color .3s ease-in-out;
+      padding: 1em 0;
+
+      &::after {
+        display: block;
+        position: absolute;
+        font-family: "Graphik", sans-serif;
+        content: ">";
+        top: 0;
+        right: -1.5em;
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+        font-size: inherit;
+        padding: 1em 0;
+      }
+
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
+}

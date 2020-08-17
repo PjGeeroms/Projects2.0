@@ -1,0 +1,29 @@
+contentColumnType: string
+fieldGroup: 3f9c4022-63a3-43ec-b68f-9257d269dc2f
+handle: caseFillerImage1
+instructions: 'The first image for a case filler'
+name: 'Case Filler image 1'
+searchable: true
+settings:
+  allowSelfRelations: ''
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:41a0c76e-da4f-46f9-8796-30bccfd886de'
+  defaultUploadLocationSubpath: ''
+  limit: ''
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:4fde25c6-9e3f-43eb-aa98-e26c5f33618d'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:41a0c76e-da4f-46f9-8796-30bccfd886de'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: ''
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets
