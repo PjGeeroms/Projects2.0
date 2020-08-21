@@ -1,5 +1,10 @@
 {% set services = craft.entries().section('service').all() %}
 
+<div class="bg-black text-white flex justify-between items-start">
+    <h2>{{ block.sectionTitle }}</h2>
+    <p>{{ block.sectionDescription }}</p>
+</div>
+
 <div class="container--fw container@md is-dark">
     <div class="container">
         <div class="grid--fw my-1 pt-7 pb-2 my-0@md px-2@lg">

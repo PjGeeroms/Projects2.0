@@ -16,14 +16,14 @@
 
 {# -- Page body -- #}
 {% block bodyHtml %}
-    <div id="page-container" class="overflow-hidden leading-tight">
-        <div id="content-container" class="bg-repeat header-background">
+    <div id="page-container" class="overflow-hidden leading-tight wrapper">
+        <div id="content-container" class="mx-4 relative">
 
             {# -- Info header, including _navbar.twig -- #}
             {% include "_partials/site-header.twig" %}
 
             <main>
-                <div class="container mx-auto pb-8">
+                <div class="pb-8">
                     {# -- Primary content block -- #}
                     {% block content %}
                     {% endblock %}

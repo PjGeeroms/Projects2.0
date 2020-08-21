@@ -1,4 +1,8 @@
-<header id="page-header">
-    <h2>header</h2>
+<header id="page-header" class="flex justify-between items-center fixed top-1 inset-x-1">
+    <div class="w-16">
+        <a href="{{ baseUrl }}">
+            {% include 'includes/logo' %}
+        </a>
+    </div>
     {% include '_partials/navbar' %}
 </header>
